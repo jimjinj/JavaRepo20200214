@@ -7,3 +7,55 @@ git pull git@github.com:jimjinj/JavaRepo20200214.git
 git push -u origin master //OK!
 
 
+//
+git 提交代码前先pull代码,否则会报如下错误
+[jim@jim javaGit3]$ git push -u origin master
+To git@github.com:jimjinj/JavaRepo20200214.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:jimjinj/JavaRepo20200214.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+[jim@jim javaGit3]$ git pull git@github.com:jimjinj/JavaRepo20200214.git // timeout, try it again
+Read from socket failed: Connection timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+[jim@jim javaGit3]$ git pull git@github.com:jimjinj/JavaRepo20200214.git  // success 2nd time!
+From github.com:jimjinj/JavaRepo20200214
+ * branch            HEAD       -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ .gitignore | 23 +++++++++++++++++++++++
+ LICENSE    | 21 +++++++++++++++++++++
+ README.md  |  2 ++
+ 3 files changed, 46 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 LICENSE
+ create mode 100644 README.md
+[jim@jim javaGit3]$ 
+
+
+[jim@jim javaGit3]$ git push -u origin master
+Counting objects: 6, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 668 bytes | 0 bytes/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To git@github.com:jimjinj/JavaRepo20200214.git
+   f768401..650aa16  master -> master
+Branch master set up to track remote branch master from origin.
+[jim@jim javaGit3]$ git status
+# On branch master
+nothing to commit, working directory clean
+[jim@jim javaGit3]$ ll
+total 12
+-rw-rw-r--. 1 jim jim  241 Feb 14 20:11 hello.cc
+-rw-rw-r--. 1 jim jim 1064 Feb 14 21:44 LICENSE
+-rw-rw-r--. 1 jim jim   66 Feb 14 21:44 README.md
+[jim@jim javaGit3]$ vi createGit_MergeGit.txt
+
