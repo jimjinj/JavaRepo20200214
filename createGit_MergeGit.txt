@@ -1,0 +1,9 @@
+mkdir javaGit3
+git init
+cp hello.c here from other dir
+git remote add origin git@github.com:jimjinj/JavaRepo20200214.git
+git push -u origin master // error occurred!
+git pull git@github.com:jimjinj/JavaRepo20200214.git
+git push -u origin master //OK!
+
+
