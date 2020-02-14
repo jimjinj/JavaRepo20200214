@@ -59,3 +59,23 @@ total 12
 -rw-rw-r--. 1 jim jim   66 Feb 14 21:44 README.md
 [jim@jim javaGit3]$ vi createGit_MergeGit.txt
 
+
+
+>>>>>
+
+bayes： but GitHub does not provide shell access
+Connection to github.com closed.
+我也出现这个了，然后git push还是需要密码。为什么呢？
+  回复  2017-07-31
+lanffy： 如果你已经设置了上面的步骤，还有个可能是你clone的时候的链接选择，不要选https的，选择git@xxxxxx的链接进行clone
+
+411  ssh-keygen  -t rsa    -f ~/.ssh/id_rsa   -C "By jinlifan 2020.02.14 v1"
+[jim@jim javaGit3]$ ssh-add 
+Enter passphrase for /home/jim/.ssh/id_rsa:   --> **$xxx9j*f
+
+
+  574  git config --global user.name jinlifan
+  575  git config --global user.email jinlifan@sina.com
+  577  git config --list
+
+
